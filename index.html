@@ -7,34 +7,39 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <h1>chocoZAP</h1>
-            <nav>
-                <ul>
-                    <li><a href="#overview">サービス概要</a></li>
-                    <li><a href="#detail">サービス詳細</a></li>
-                    <li><a href="#form">お問い合わせフォーム</a></li>
-                </ul>
-            </nav>
+            <div class="header-container">
+                <h1>chocoZAP</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">サービス概要</a></li>
+                        <li><a href="#detail">サービス詳細</a></li>
+                        <li><a href="#form">お問い合わせフォーム</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <img src="images/main_img.avif" alt="メイン広告">
             <img src="images/price_img.avif" alt="値段">
             <article id="overview">
-                <h2>サービス概要</h2>
-                <p>ChocoZAPは「運動したいけど、ジムに通うのが大変...」という方のために生まれた、<strong>いつでも気軽に通える無人ジム</strong>です。</p>
-                <p>24時間営業、予約不要、さらにアプリで簡単にトレーニング指導も受けられます。初心者でも安心して運動を始められる環境を提供しています。</p>
+                <h2 class="overview-title">サービス概要</h2>
+                <p class="overview-content">ChocoZAPは「運動したいけど、ジムに通うのが大変...」という方のために生まれた、<strong>いつでも気軽に通える無人ジム</strong>です。</p>
+                <p class="overview-content">24時間営業、予約不要、さらにアプリで簡単にトレーニング指導も受けられます。初心者でも安心して運動を始められる環境を提供しています。</p>
             </article>
-            <section>
-                <h2>こんな方におすすめ！</h2>
-                <ul>
-                    <li>忙しくてジムに通う時間がない方</li>
-                    <li>運動を始めたいけど、何から始めればいいかわからない方</li>
-                    <li>健康だけでなく、美容にも興味がある方</li>
-                </ul>
+            <section class="recommendation">
+                <h2 class="recommendation-h2">こんな方におすすめ！</h2>
+                <div class="recommendation-content">
+                    <ul class="recommendation-content-ul">
+                        <li class="recommendation-content-item">忙しくてジムに通う時間がない方</li>
+                        <li class="recommendation-content-item">運動を始めたいけど、何から始めればいいかわからない方</li>
+                        <li class="recommendation-content-item">健康だけでなく、美容にも興味がある方</li>
+                    </ul>
+                </div>
             </section>
 
             <section>
@@ -57,104 +62,112 @@
                     </li>
                 </ul>
             </section>
-            <section>
-                <h2>体験者の声</h2>
-                <h3>好きなものを食べても罪悪感なし！運動習慣と健康的な食生活が身についた</h3>
-                    <ul>
+            <section class="voice">
+                <h2 class="recommendation-h2">体験者の声</h2>
+                <div class="voice-content">
+                    <h3>好きなものを食べても罪悪感なし！運動習慣と健康的な食生活が身についた</h3>
+                    <h3>運動継続の秘訣は無理をしないこと！気がつけば人生の楽しみが広がっていた</h3>
+                    <h3>スキマ時間で美容ケア。有意義に時間を使うことで、気持ちも前向きに</h3>
+                    <ul >
                         <li>大塚 冴子</li>
                         <li>30代</li>
                     </ul>
-                <h3>運動継続の秘訣は無理をしないこと！気がつけば人生の楽しみが広がっていた</h3>
                     <ul>
                         <li>佐々木 京一</li>
                         <li>70代</li>
                     </ul>
-                <h3>スキマ時間で美容ケア。有意義に時間を使うことで、気持ちも前向きに</h3>
                     <ul>
                         <li>鹿内 伸朗</li>
                         <li>40代</li>
                     </ul>
+                </div>
             </section>
             
             <section id="form">
                 <form>
                     <h2>お問い合わせフォーム</h2>
-                    <p>
-                        <label for="name">名前：</label>
-                        <input type="text" placeholder="山田太郎" id="name">
-                    </p>
-                    <p>住所</p>
-                        <ul>
-                            <li>
-                                <label for="post-code">郵便番号：</label>
-                                <input type="number" placeholder="123" id="post-code"> - <input type="number" placeholder="1234" id="post-code">
-                            </li>
-                            <li><label for="prefectures">都道府県：</label>
-                                <input type="text" placeholder="（例：XX県）" id="placeholder" id="prefectures">
-                            </li>
-                            <li><label for="municipality">市区町村：</label>
-                                <input type="text" placeholder="（例：XX市XX区）" id="municipality">
-                            </li>
-                            <li><label for="town-area">町域・番地：</label>
-                                <input type="text" placeholder="XX町1-1" id="town-area">
-                            </li>
-                            <li><label for="building-name">建物名など：</label>
-                                <input type="text" placeholder="XXマンション101号室" id="building-name">
-                            </li>
-                        </ul>
-                    <p>
-                        <label for="date-of-birth">生年月日：</label>
-                        <input type="date" id="date-of-birth">
-                    </p>
-                    <p>
-                        性別：
-                        <input type="radio" name="gender" value="男" id="man">
-                        <label for="man">男</label>
-                        <input type="radio" name="gender" value="女" id="woman">
-                        <label for="woman">女</label>
-                        <input type="radio" name="gender" value="その他" id="others">
-                        <label for="others">その他</label><br>
-                    </p>
-                    <p>
-                        購入動機（複数可）：
-                        <ul>
-                            <li>
-                                <input type="checkbox" name="motive" value="手軽に運動を始めたかったから" id="tegaru">
-                                <label for="tegaru">手軽に運動を始めたかったから</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="motive" value="24時間営業で好きな時間に通えるから" id="24jikan">
-                                <label for="24jikan">24時間営業で好きな時間に通えるから</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="motive" value="美容（セルフエステ・セルフ脱毛）に興味があったから" id="biyou">
-                                <label for="biyou">美容（セルフエステ・セルフ脱毛）に興味があったから</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="motive" value="短時間で効率的に運動したかったから" id="tanjikan">
-                                <label for="tanjikan">短時間で効率的に運動したかったから</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="motive" value="健康診断で運動の必要性を感じたから" id="kennkou">
-                                <label for="kennkou">健康診断で運動の必要性を感じたから</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="motive" value="その他（自由記入欄）" id="free">
-                                <label for="free">その他（自由記入欄）</label>
-                                <input type="text" id="free">
-                            </li>
-                        </ul>
-                    </p>
-                    <p>
-                        <label for="request">要望：</label><br>
-                        <textarea name="message" placeholder="メッセージを入力" id="request"></textarea>
-                    </p>
+                    <div class="inquiry">
+                        <p>
+                            <label for="name">名前：</label>
+                            <input type="text" placeholder="山田太郎" id="name">
+                        </p>
+                        <p>住所</p>
+                            <ul>
+                                <li class="address-item">
+                                    <label for="post-code">郵便番号：</label>
+                                    <input type="number" placeholder="123" id="post-code"> - <input type="number" placeholder="1234" id="post-code">
+                                </li>
+                                <li class="address-item">
+                                    <label for="prefectures">都道府県：</label>
+                                    <input type="text" placeholder="（例：XX県）" id="placeholder" id="prefectures">
+                                </li>
+                                <li class="address-item">
+                                    <label for="municipality">市区町村：</label>
+                                    <input type="text" placeholder="（例：XX市XX区）" id="municipality">
+                                </li>
+                                <li class="address-item">
+                                    <label for="town-area">町域・番地：</label>
+                                    <input type="text" placeholder="XX町1-1" id="town-area">
+                                </li>
+                                <li class="address-item">
+                                    <label for="building-name">建物名など：</label>
+                                    <input type="text" placeholder="XXマンション101号室" id="building-name">
+                                </li>
+                            </ul>
+                        <p>
+                            <label for="date-of-birth">生年月日：</label>
+                            <input type="date" id="date-of-birth">
+                        </p>
+                        <p>
+                            性別：
+                            <input type="radio" name="gender" value="男" id="man">
+                            <label for="man">男</label>
+                            <input type="radio" name="gender" value="女" id="woman">
+                            <label for="woman">女</label>
+                            <input type="radio" name="gender" value="その他" id="others">
+                            <label for="others">その他</label><br>
+                        </p>
+                        <p>
+                            購入動機（複数可）：
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="motive" value="手軽に運動を始めたかったから" id="tegaru">
+                                    <label for="tegaru">手軽に運動を始めたかったから</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motive" value="24時間営業で好きな時間に通えるから" id="24jikan">
+                                    <label for="24jikan">24時間営業で好きな時間に通えるから</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motive" value="美容（セルフエステ・セルフ脱毛）に興味があったから" id="biyou">
+                                    <label for="biyou">美容（セルフエステ・セルフ脱毛）に興味があったから</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motive" value="短時間で効率的に運動したかったから" id="tanjikan">
+                                    <label for="tanjikan">短時間で効率的に運動したかったから</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motive" value="健康診断で運動の必要性を感じたから" id="kennkou">
+                                    <label for="kennkou">健康診断で運動の必要性を感じたから</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="motive" value="その他（自由記入欄）" id="free">
+                                    <label for="free">その他（自由記入欄）</label>
+                                    <input type="text" id="free">
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            <label for="request">要望：</label><br>
+                            <textarea name="message" placeholder="メッセージを入力" id="request"></textarea>
+                        </p>
+                    </div>
                 </form>
             </section>
         </main>
         <aside>
             <h2>会社概要</h2>
-            <table>
+            <table border="1">
                 <tbody>
                     <tr>
                         <th>社名</th>
